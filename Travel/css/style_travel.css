@@ -34,7 +34,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 30px 18%;
+    padding: 20px;
     transition: ease .40s;
 }
 
@@ -125,7 +125,6 @@ section {
 
 header.sticky {
     background: var(--bg-color);
-    padding: 10px 18%;
     box-shadow: rgb(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
@@ -140,6 +139,7 @@ header.sticky {
 .text h2 {
     font-size: var(--h2-font);
     line-height: 1.1;
+    text-align: center;
 }
 
 .row-item {
@@ -327,6 +327,7 @@ header.sticky {
     border-radius: 15px;
     transition: .3s;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .list .social a:hover {
@@ -348,14 +349,44 @@ header.sticky {
     color: var(--bg-color);
 }
 
+.trip-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #34e0a1; /* Фирменный цвет TripAdvisor или твой основной цвет */
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.trip-link i {
+    margin-right: 5px;
+}
+
+.trip-link:hover {
+    color: #000;
+    transform: translateX(5px);
+}
+
+.thum a {
+    display: block;
+    overflow: hidden;
+}
+
+.thum img {
+    transition: transform 0.5s ease;
+}
+
+.thum:hover img {
+    transform: scale(1.1); /* Эффект увеличения картинки при наведении */
+}
+
 @media (max-width:1400px) {
     header {
-        padding: 17px 3%;
         transition: .2s;
     }
 
     header.sticky {
-        padding: 10px 3%;
         transition: .2s;
     }
 
@@ -370,6 +401,7 @@ header.sticky {
         --p-font: 1rem;
         transition: .2s;
     }
+
 }
 
 @media (max-width:1040px) {
@@ -426,4 +458,15 @@ header.sticky {
     .list {
         width: 100%;
     }
+}
+
+@media (min-width:1025px) {
+
+    section {
+    padding: 50px;
+}
+.home-text{
+    margin-bottom: 100px;
+}
+    
 }
